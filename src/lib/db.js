@@ -1,10 +1,11 @@
 import { createClient } from 'redis';
+import { config } from '../../config';
 
 const client = createClient({
-    password: 'LkDZSXvQokTlTAj6Imi0HXPJzpCmPRNr',
+    password: config.dev.db_password,
     socket: {
-        host: 'redis-12326.c300.eu-central-1-1.ec2.cloud.redislabs.com',
-        port: 12326
+        host: config.dev.db_host,
+        port: config.dev.db_port
     }
 });
 
