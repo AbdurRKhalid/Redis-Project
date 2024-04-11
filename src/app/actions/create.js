@@ -30,6 +30,8 @@ export async function createBook(formData) {
     blurb
   });
 
+  await client.disconnect();
+
   redirect('/');
 
 }
